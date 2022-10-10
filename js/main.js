@@ -101,6 +101,26 @@ document.location.reload(true);
     onscroll(document, headerScrolled)
   }
 
+
+  let selectHead = select('#header')
+  let selectTop = select('#topbar')
+  if (selectHead) {
+    const headScrolled = () => {
+      if (window.scrollY > 100) {
+        selectHead.classList.add('head-scrolled')
+        if (selectTop) {
+          selectTop.classList.add('top-scrolled')
+        }
+      } else {
+        selectHead.classList.remove('head-scrolled')
+        if (selectTop) {
+          selectTop.classList.remove('top-scrolled')
+        }
+      }
+    }
+    window.addEventListener('load', headScrolled)
+    onscroll(document, headScrolled)
+  }
   
   /**
    * Back to top button
