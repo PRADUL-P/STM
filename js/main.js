@@ -33,10 +33,10 @@
     }
   }
 // pagerefresh
-  window.onresize = function(event)
-{
-document.location.reload(true);
-}
+//   window.onresize = function(event)
+// {
+// document.location.reload(true);
+// }
   /**
    * Easy on scroll event listener 
    */
